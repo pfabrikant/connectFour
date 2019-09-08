@@ -1,0 +1,88 @@
+h1 {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 4rem;
+    color: white;
+    font-style: italic;
+}
+body {
+    position: relative;
+    background-image: url("https://ak3.picdn.net/shutterstock/videos/11058173/thumb/1.jpg");
+}
+.messageBoard {
+    background-image: url("https://www.wwaytv3.com/wp-content/uploads/2019/01/1280x960_71219B00-ZFSMK.jpg");
+    position: absolute;
+    width: 50%;
+    height: 30vh;
+    left: -50%;
+    color: white;
+    font-size: 36px;
+    text-align: center;
+    border: gold 3px solid;
+    border-radius: 5%;
+    top: 238%;
+    z-index: 250;
+    opacity: 0;
+    transition: opacity 7s;
+    transition: left 2s;
+    padding-top: 20vh;
+    font-weight: bolder;
+    background-size: cover;
+}
+.messageBoard.on {
+    opacity: 1;
+    left: 25%;
+}
+.board {
+    height: 75vh;
+    width: 80%;
+    border: 1px white solid;
+    /* background-image: url("https://apod.nasa.gov/apod/image/1705/Arp273Main_HubblePestana_3079.jpg"); */
+    display: flex;
+    z-index: 200;
+    position: absolute;
+    top: 110%;
+    left: 10%;
+    background-size: cover;
+    padding: 10px 0 5px 15px;
+}
+.column {
+    width: 14%;
+    height: 100%;
+}
+.slot {
+    height: 16%;
+    border-radius: 50%;
+    margin: 2px;
+    position: relative;
+    background-image: linear-gradient(to right, #042e72, #ccced1);
+    z-index: 130;
+}
+.token {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 500%;
+    left: 10%;
+    z-index: 350;
+    opacity: 0;
+    transition-property: transform, bottom, opacity;
+    transition-duration: 2s;
+    box-shadow: 2px 2px grey;
+}
+
+.token.player1 {
+    background-image: linear-gradient(to right, #e09aa6, #e2042d);
+    bottom: 2px;
+    opacity: 1;
+}
+.token.player2 {
+    background-image: linear-gradient(to right, #92c191, #0b7509);
+    bottom: 2px;
+    opacity: 1;
+}
+.token.highlight {
+    transform: scale(1.3);
+    border: white 2px solid;
+}
